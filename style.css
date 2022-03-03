@@ -1,0 +1,100 @@
+:root{
+    --yclair: #F2B705;
+    --ychaud: #F2AC57;
+    --brun: #A66832;
+    --marron: #59381C;
+    --noir: #261911;
+}
+
+a:hover{
+    color: var(--yclair);
+}
+
+.bg-noir{
+    background-color: var(--noir);
+}
+
+.noir{
+    color: var(--noir);
+}
+
+.bg-brun{
+    background-color: var(--brun);
+}
+
+.ychaud,
+.ychaud a,
+.ychaud p{
+    color: var(--ychaud);
+}
+
+#menuprincipal .active{
+    background-color: var(--ychaud);
+    color: var(--noir);
+}
+
+
+
+/* ----- CAROUSEL ----- */
+#slider{
+    /* background-color: var(--marron); */
+    padding: 20px 0;
+    width: 100%;
+    height: 50vh;
+}
+
+#slider img{
+    height: 100%; 
+    object-fit: cover;
+}
+
+.control i{
+    font-size: 1.5rem;
+}
+
+.control i{
+    color: var(--noir);
+    opacity: .5;
+}
+
+.control:hover i{
+opacity: .8;
+}
+
+/* END CAROUSEL */
+
+
+/* ----- LISTE DES PORTFOLIO ----- */
+.all-cards{
+    height: 475px;
+}
+
+.all-cards:hover{
+    background-color: rgb(246, 245, 245);
+}
+
+.all-cards .card-img{
+    border: 1px rgba(0,0,0,.125) solid;
+    border-radius: 5px;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+    width: 400px;
+    margin: 0 auto;
+}
+
+.all-cards .card-img img{
+    width: 100%;
+}
+/* END LISTE DES PORTFOLIO */
+
+/* ----- PAGE DETAIL PORTFOLIO ----- */
+
+.border-soft{
+    border: 1px solid var(--noir);
+    color: rgba(38, 25, 17, 0.5);
+}
+
+#modal-window{
+    width: 80%;
+    max-width: 100%;
+}

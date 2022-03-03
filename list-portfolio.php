@@ -1,38 +1,39 @@
-<?php include_once('header.php'); ?>
+<?php include_once('header.php');
+require_once('class/fakeBdd.php'); 
+?>
 
 
 <!-- CAROUSEL -->
-<section id="carouselControls" class="carousel slide container" data-ride="carousel">
-    <div class="carousel-inner">
+<section id="carouselControls" class="d-none d-md-block carousel slide mb-4 mt-n4" data-ride="carousel" data-pause="hover" data-touch="true">
+    <!-- images -->
+    <div id="slider" class="carousel-inner">
         <div class="carousel-item active">
-            <img src="images/001.png" class="d-block w-100" alt="">
+            <a href="#<?= $allPortfolios[0]->getId();?>">
+                <img src="<?= $allPortfolios[0]->getImage();?>" class="d-block mx-auto w-75" alt="<?= $allPortfolios[0]->getTitle();?>">
+            </a>
         </div>
+        <?php foreach(array_slice ($allPortfolios, 1) as $allPortfolio) {                
+                ?> 
+
         <div class="carousel-item">
-            <img src="images/004.png" class="d-block w-100" alt="">
+            <a href="#<?= $allPortfolio->getId();?>">
+                <img src="<?= $allPortfolio->getImage();?>" class="d-block mx-auto w-75" alt="<?= $allPortfolio->getTitle();?>">
+            </a>
         </div>
-        <div class="carousel-item">
-            <img src="images/007.png" class="d-block w-100" alt="">
-        </div>
-        <div class="carousel-item">
-            <img src="images/010.png" class="d-block w-100" alt="">
-        </div>
-        <div class="carousel-item">
-            <img src="images/012.png" class="d-block w-100" alt="">
-        </div>
-        <div class="carousel-item">
-            <img src="images/025.png" class="d-block w-100" alt="">
-        </div>
+        
+        <?php }; ?> 
     </div>
     <!-- Controls du carousel -->
-    <a href="#carouselControls" class="carousel-control-prev" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <a href="#carouselControls" class="control carousel-control-prev noir" role="button" data-slide="prev">
+        <span aria-hidden="true"><i class="fa-solid fa-chevron-left"></i></span>
         <span class="sr-only">Précédent</span>
     </a>
-    <a href="#carouselControls" class="carousel-control-next" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <a href="#carouselControls" class="control carousel-control-next noir" role="button" data-slide="next">
+        <span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
         <span class="sr-only">Suivant</span>
     </a>
 </section>
+
 
 <!-- Alerte MAJ régulières -->
 <aside class="alert alert-success alert-dismissible fade show container" role="alert">
@@ -45,74 +46,25 @@
 
 
 <!-- CARDS -->
-<section class="container">
-    <div class="row">
-        <div class="col-12 col-lg-6 mt-5">
-            <div class="card shadow">
-                <img class="card-img-top" src="images/001.png" alt="Mon beau site">
-                <div class="card-body">
-                    <h3 class="card-title">Titre du projet</h3>
-                    <p class="card-text">Explications description</p>
-                    <a class="btn btn-info d-block w-50 mx-auto" href="#">Détails du projet</a>
+<section class="container mb-4">
+    <div class="row justify-content-between">
+    <?php foreach($allPortfolios as $allPortfolio) {?>
+        <article id="<?= $allPortfolio->getId();?>" class="col-12 col-lg-5 mt-5 project-card">
+            <div class="row card shadow pt-3 all-cards">
+                <div class="card-img">
+                    <a href="<?= $allPortfolio->getUrl();?>">
+                        <img class="card-img-top mx-auto border-soft" src="<?= $allPortfolio->getImage();?>" alt="<?= $allPortfolio->getTitle();?>">
+                    </a>
                 </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-lg-6 mt-5">
-            <div class="card shadow">
-                <img class="card-img-top" src="images/004.png" alt="Mon beau site">
                 <div class="card-body">
-                    <h3 class="card-title">Titre du projet</h3>
-                    <p class="card-text">Explications description</p>
-                    <a class="btn btn-info d-block w-50 mx-auto" href="#">Détails du projet</a>
+                    <h3 class="card-title"><?= $allPortfolio->getTitle();?></h3>
+                    <p class="card-text"><?= $allPortfolio->getUnderTitle();?></p>
+                    
                 </div>
+                <a class="btn btn-info d-block w-50 mx-auto mb-4" href="<?= $allPortfolio->getUrl();?>">Détails du projet</a>
             </div>
-        </div>
-
-        <div class="col-12 col-lg-6 mt-5">
-            <div class="card shadow">
-                <img class="card-img-top" src="images/007.png" alt="Mon beau site">
-                <div class="card-body">
-                    <h3 class="card-title">Titre du projet</h3>
-                    <p class="card-text">Explications description</p>
-                    <a class="btn btn-info d-block w-50 mx-auto" href="#">Détails du projet</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-lg-6 mt-5">
-            <div class="card shadow">
-                <img class="card-img-top" src="images/010.png" alt="Mon beau site">
-                <div class="card-body">
-                    <h3 class="card-title">Titre du projet</h3>
-                    <p class="card-text">Explications description</p>
-                    <a class="btn btn-info d-block w-50 mx-auto" href="#">Détails du projet</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-lg-6 mt-5">
-            <div class="card shadow">
-                <img class="card-img-top" src="images/012.png" alt="Mon beau site">
-                <div class="card-body">
-                    <h3 class="card-title">Titre du projet</h3>
-                    <p class="card-text">Explications description</p>
-                    <a class="btn btn-info d-block w-50 mx-auto" href="#">Détails du projet</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-lg-6 mt-5">
-            <div class="card shadow">
-                <img class="card-img-top" src="images/025.png" alt="Mon beau site">
-                <div class="card-body">
-                    <h3 class="card-title">Titre du projet</h3>
-                    <p class="card-text">Explications description</p>
-                    <a class="btn btn-info d-block w-50 mx-auto" href="#">Détails du projet</a>
-                </div>
-            </div>
-        </div>
-
+    </article>
+    <?php } ?>
     </div>
 </section>
 
