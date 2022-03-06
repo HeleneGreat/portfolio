@@ -4,7 +4,7 @@ require_once('class/fakeBdd.php');
 
 
 <!-- CAROUSEL -->
-<section id="carouselControls" class="d-none d-md-block carousel slide mb-4 mt-n4" data-ride="carousel" data-pause="hover" data-touch="true">
+<section id="carouselControls" class="d-none d-md-block carousel slide mb-4 mt-n4" data-ride="carousel" data-interval="3500" data-pause="hover" data-touch="true">
     <!-- images -->
     <div id="slider" class="carousel-inner">
         <div class="carousel-item active">
@@ -24,11 +24,11 @@ require_once('class/fakeBdd.php');
         <?php }; ?> 
     </div>
     <!-- Controls du carousel -->
-    <a href="#carouselControls" class="control carousel-control-prev noir" role="button" data-slide="prev">
+    <a href="#carouselControls" class="control carousel-control-prev bleu" role="button" data-slide="prev">
         <span aria-hidden="true"><i class="fa-solid fa-chevron-left"></i></span>
         <span class="sr-only">Précédent</span>
     </a>
-    <a href="#carouselControls" class="control carousel-control-next noir" role="button" data-slide="next">
+    <a href="#carouselControls" class="control carousel-control-next bleu" role="button" data-slide="next">
         <span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
         <span class="sr-only">Suivant</span>
     </a>
@@ -50,20 +50,19 @@ require_once('class/fakeBdd.php');
     <div class="row justify-content-between">
     <?php foreach($allPortfolios as $allPortfolio) {?>
         <article id="<?= $allPortfolio->getId();?>" class="col-12 col-lg-5 mt-5 project-card">
-            <div class="row card shadow pt-3 all-cards">
-                <div class="card-img">
+            <div class="card shadow pt-3 px-2 all-cards">
+                <!-- <div class="card-img"> -->
                     <a href="<?= $allPortfolio->getUrl();?>">
                         <img class="card-img-top mx-auto border-soft" src="<?= $allPortfolio->getImage();?>" alt="<?= $allPortfolio->getTitle();?>">
                     </a>
-                </div>
+                <!-- </div> -->
                 <div class="card-body">
                     <h3 class="card-title"><?= $allPortfolio->getTitle();?></h3>
                     <p class="card-text"><?= $allPortfolio->getUnderTitle();?></p>
-                    
-                </div>
-                <a class="btn btn-info d-block w-50 mx-auto mb-4" href="<?= $allPortfolio->getUrl();?>">Détails du projet</a>
+                </div>   
+                <a class="btn btn-bleu w-50 mx-auto mb-4" href="<?= $allPortfolio->getUrl();?>">Détails du projet</a>
             </div>
-    </article>
+        </article>
     <?php } ?>
     </div>
 </section>

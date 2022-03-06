@@ -7,21 +7,28 @@ class Portfolio{
     private string $title;
     private string $underTitle;
     private string $image;
-    private array $screenshots;
+    private string $screenshot1;
+    private string $screenshot2;
+    private string $screenshot3;
     private string $externalLink;
     private string $github;
     private array $techno;
+    private string $description;
+    
 
 
-    function __construct(int $id, string $title, string $underTitle, string $image, array $screenshots, string $externalLink, string $github, array $techno){
+    function __construct(int $id, string $title, string $underTitle, string $image, string $screenshot1, string $screenshot2, string $screenshot3, string $externalLink, string $github, array $techno, string $description){
         $this->id = $id;
         $this->title = $title;
         $this->underTitle = $underTitle;
         $this->image = $image;
-        $this->screenshots = $screenshots;
+        $this->screenshot1 = $screenshot1;
+        $this->screenshot2 = $screenshot2;
+        $this->screenshot3 = $screenshot3;
         $this->externalLink = $externalLink;
         $this->github = $github;
         $this->techno = $techno;
+        $this->description = $description;
     }
 
     function getId (){
@@ -40,8 +47,16 @@ class Portfolio{
         return "images/" . $this->image;
     }
 
-    function getScreenshots (){
-        return $this->screenshots;
+    function getScreenshot1 (){
+        return $this->screenshot1;
+    }
+
+    function getScreenshot2 (){
+        return $this->screenshot2;
+    }
+
+    function getScreenshot3 (){
+        return $this->screenshot3;
     }
 
     function getExternalLink (){
@@ -49,11 +64,15 @@ class Portfolio{
     }
 
     function getGithub (){
-        return $this->github;
+        return "https://github.com/HeleneGreat/" . $this->github;
     }
 
     function getTechno (){
         return $this->techno;
+    }
+
+    function getDescription (){
+        return $this->description;
     }
 
 

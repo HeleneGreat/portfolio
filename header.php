@@ -1,3 +1,14 @@
+<?php
+/* récupération de l'adresse de page passée dans URL*/
+$path='http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+// echo $path.'<br>';
+/*récupération du dernier élément*/
+$current=basename($path);
+// echo $current;
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,19 +26,19 @@
 <body>
 
     <header>
-        <div id="bandeau-header" class="bg-noir sticky-top">
+        <div id="bandeau-header" class="bg-bleu sticky">
             <div class="container ligne">
                 <div class="row">
-                    <nav id="menuprincipal" class="col navbar navbar-expand-lg">
-                        <a class="navbar-brand ychaud" href="index.php"><i class="fa-solid fa-code"></i> <span class="font-italic">Hélène Carriou</span>, développeuse web</a>
+                    <nav id="menuprincipal" class="col d-flex navbar navbar-expand-xl py-xl-5">
+                        <h2 class="yclair"><a class="navbar-brand row" href="index.php"><i class="fa-solid fa-code"></i></a> <span class="font-italic">Hélène Carriou</span>, développeuse web</h2>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-                            <span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
                         </button>
-                        <div id="navbarContent" class="collapse navbar-collapse">
-                            <ul class="navbar-nav ychaud nav-pills">
-                                <li class="nav-item active"><a class="nav-link" aria-current="page" href="index.php">CV</a></li>
-                                <li class="nav-item"><a class="nav-link" href="list-portfolio.php">Portfolio</a></li>
-                                <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+                        <div id="navbarContent" class="collapse navbar-collapse justify-content-end mx-3">
+                            <ul id="navbar" class="navbar-nav yclair nav-pills">
+                                <li class="nav-item mx-3 mx-xl-0"><a class="nav-link text-center <?php if($current=='index.php'){echo 'isactive';}?>" href="index.php">CV</a></li>
+                                <li class="nav-item mx-3"><a class="nav-link text-center <?php if($current=='list-portfolio.php'){echo 'isactive';}?>" href="list-portfolio.php">Portfolio</a></li>
+                                <li class="nav-item mx-3"><a class="nav-link text-center" href="https://www.linkedin.com/in/h%C3%A9l%C3%A8ne-carriou/" target="_blank">Contactez-moi sur LinkedIn</a></li>
                             </ul>
                         </div>
                     </nav>

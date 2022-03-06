@@ -29,13 +29,20 @@ for($i = 0; $i<count($allPortfolios); $i++ ){
                         <div class="row">
                             <div class="col-12 col-md-8">
                                 <h2>Cahier des charges</h2>
+                                <p class="pl-3"><?= $allPortfolios[$currentId]->getDescription();?></p>
                             </div>
-                            <div class="col-12 col-md-4 border-left">
+                            <div class="col-12 col-md-4 text-center border-left">
                                 <h2>Technologies utilisées</h2>
+                                <ul>
+                                <?php foreach($allPortfolios[$currentId]->getTechno() as $techno) {?>
+                                    <li class="techno"><span><?= $techno ; ?></span></li>
+                                    <?php } ?>
+                                    <li><a title="GitHub" href="<?= $allPortfolios[$currentId]->getGithub();?>"><i class="fa-brands fa-github"></i></a></li>
+                                </ul>
                             </div>
                         </div>
 
-                        <a class="btn btn-info d-block col-2 mx-auto" href="<?= $allPortfolios[$currentId]->getExternalLink();?>" target=_blank>Voir le site en ligne</a>
+                        <a class="btn btn-bleu d-block col-8 col-sm-6  col-md-3  col-xl-2 mx-auto" href="<?= $allPortfolios[$currentId]->getExternalLink();?>" target=_blank>Voir le site en ligne</a>
                     </div>
                 </div>
             </div>
@@ -47,28 +54,70 @@ for($i = 0; $i<count($allPortfolios); $i++ ){
 <section class="container mt-3">
     <div class="row justify-content-around">
         <!-- CAPTURE D'ECRAN  -->
-
-        <?php foreach($allPortfolios[$currentId]->getScreenshots() as $screenshot) {?>
+           
+          
+    <!-- PHOTO 1 -->
         <article class="col-12 col-lg-3 mt-5">
             <div id="detail-card" class="col row card shadow no-gutters py-3">
-            <button type="button" class="col btn" data-toggle="modal" data-target="#myModal">
-                <img class="card-img" src="images/<?= $screenshot; ?>" alt="">
+            <button type="button" class="col btn" data-toggle="modal" data-target="#myModal1">
+                <img class="card-img" src="images/<?= $allPortfolios[$currentId]->getScreenshot1(); ?>" alt="">
             </button>
             </div>
             <!-- The Modal -->
-            <div class="modal" id="myModal">
+            <div class="modal" id="myModal1">
                 <div id="modal-window" class="modal-dialog">
                     <div class="modal-content">
                         <!-- Modal body -->
                         <div class="modal-body ">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <img class="col" src="images/<?= $screenshot; ?>" alt="">
+                            <img class="col mb-3" src="images/<?= $allPortfolios[$currentId]->getScreenshot1(); ?>" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </article>
-        <?php };?>
+
+<!-- PHOTO 2 -->
+        <article class="col-12 col-lg-3 mt-5">
+            <div id="detail-card" class="col row card shadow no-gutters py-3">
+            <button type="button" class="col btn" data-toggle="modal" data-target="#myModal2">
+                <img class="card-img" src="images/<?= $allPortfolios[$currentId]->getScreenshot2(); ?>" alt="">
+            </button>
+            </div>
+            <!-- The Modal -->
+            <div class="modal" id="myModal2">
+                <div id="modal-window" class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- Modal body -->
+                        <div class="modal-body ">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <img class="col mb-3" src="images/<?= $allPortfolios[$currentId]->getScreenshot2(); ?>" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    <!-- PHOTO 3 -->
+        <article class="col-12 col-lg-3 mt-5">
+            <div id="detail-card" class="col row card shadow no-gutters py-3">
+            <button type="button" class="col btn" data-toggle="modal" data-target="#myModal3">
+                <img class="card-img" src="images/<?= $allPortfolios[$currentId]->getScreenshot3(); ?>" alt="">
+            </button>
+            </div>
+            <!-- The Modal -->
+            <div class="modal" id="myModal3">
+                <div id="modal-window" class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- Modal body -->
+                        <div class="modal-body ">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <img class="col mb-3" src="images/<?= $allPortfolios[$currentId]->getScreenshot3(); ?>" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
     
     </div>
 </section>

@@ -1,43 +1,114 @@
+/*
+- RESET
+- HEADER
+- FOOTER
+- CAROUSEL
+- LISTE DES PORTFOLIOS
+- PAGE DETAIL PORTFOLIO
+*/
+
+
+/* ----- RESET ----- */
 :root{
     --yclair: #F2B705;
-    --ychaud: #F2AC57;
-    --brun: #A66832;
-    --marron: #59381C;
     --noir: #261911;
+    --bleu: #1e3c72;
+}
+
+li{
+    list-style-type: none;
 }
 
 a:hover{
     color: var(--yclair);
 }
 
-.bg-noir{
-    background-color: var(--noir);
+.bg-bleu{
+    background-color: var(--bleu);
 }
 
-.noir{
-    color: var(--noir);
+.bleu{
+    color: var(--bleu);
 }
 
-.bg-brun{
-    background-color: var(--brun);
+.btn-bleu{
+    color: var(--yclair);
+    background-color: var(--bleu);
+    border-color: var(--bleu);
 }
 
-.ychaud,
-.ychaud a,
-.ychaud p{
-    color: var(--ychaud);
+.btn-bleu:hover{
+    color: var(--yclair);
+    background-color: #274a8d;
 }
 
-#menuprincipal .active{
-    background-color: var(--ychaud);
-    color: var(--noir);
+.yclair,
+.yclair a,
+.yclair p{
+    color: var(--yclair);
 }
+
+@font-face {
+    font-family: 'abelregular';
+    src: url('fonts/abel-regular-webfont.woff2') format('woff2'),
+         url('fonts/abel-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: 'abelregular', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+/* END RESET */
+
+
+/* ----- HEADER ----- */
+#bandeau-header h2 a,
+#bandeau-header h2 span,
+#bandeau-header h2{
+    font-size: 32px;
+}
+
+.nav-link{
+    font-size: 1.3rem;
+}
+
+.navbar-nav .isactive,
+.navbar-nav .isactive a,
+.nav-link:hover{
+    background-color: var(--yclair);
+    color: var(--bleu);
+}
+
+.navbar-toggler,
+.navbar-toggler-icon{
+    color: var(--yclair);
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+.sticky{
+    position: sticky !important;
+    top: 0;
+    z-index: 9999999;
+}
+/* END HEADER */
+
+/* ----- FOOTER ----- */
+#pied li a{
+    font-size: 1.5rem;
+}
+
+#pied li a i{
+    font-size: 1.6rem;
+}
+/* END FOOTER */
 
 
 
 /* ----- CAROUSEL ----- */
 #slider{
-    /* background-color: var(--marron); */
     padding: 20px 0;
     width: 100%;
     height: 50vh;
@@ -53,24 +124,23 @@ a:hover{
 }
 
 .control i{
-    color: var(--noir);
+    color: var(--bleu);
     opacity: .5;
 }
 
 .control:hover i{
 opacity: .8;
 }
-
 /* END CAROUSEL */
 
 
-/* ----- LISTE DES PORTFOLIO ----- */
+/* ----- LISTE DES PORTFOLIOS ----- */
 .all-cards{
-    height: 475px;
+    height: 545px;
 }
 
 .all-cards:hover{
-    background-color: rgb(246, 245, 245);
+    background-color: rgb(240, 239, 239);
 }
 
 .all-cards .card-img{
@@ -85,10 +155,11 @@ opacity: .8;
 .all-cards .card-img img{
     width: 100%;
 }
-/* END LISTE DES PORTFOLIO */
+/* END LISTE DES PORTFOLIOS */
+
+
 
 /* ----- PAGE DETAIL PORTFOLIO ----- */
-
 .border-soft{
     border: 1px solid var(--noir);
     color: rgba(38, 25, 17, 0.5);
@@ -97,4 +168,55 @@ opacity: .8;
 #modal-window{
     width: 80%;
     max-width: 100%;
+}
+
+.modal-body{
+    max-height: 870px;
+}
+
+.modal-body img{
+    object-fit: contain;
+    max-height: 780px;
+}
+
+li.techno{
+    margin-bottom: 15px;
+}
+
+
+li.techno span{
+    background-color: var(--yclair);
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.card-body li a i{
+    color: var(--yclair);
+    font-size: 2.3rem;
+    border-radius: 100%;
+}
+
+.card-body li a i:hover{
+    background-color: #1e3c72;
+}
+
+
+/* END DETAIL PORTFOLIO */
+@media screen and (min-width: 768px) { 
+    .all-cards{
+        height: 615px;
+    }
+}
+
+
+@media screen and (min-width:992px){
+
+    #menuprincipal{
+        display: block;
+    }
+
+    .all-cards{
+        height: 520px;
+    }
+
 }

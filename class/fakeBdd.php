@@ -8,7 +8,9 @@ require_once('Portfolio.php');
 - titre
 - sous-titre
 - image (capture d'écran)
-- [3 captures d'écran / du code]
+- screenshot 1
+- screenshot 2
+- screenshot 3
 - lien externe
 - lien Github
 - [technologies utilisées]
@@ -23,10 +25,15 @@ $istorel = new Portfolio(
     "Istorel, association d'histoire locale", 
     "Refonte d'un site web non responsive et au design démodé", 
     "istorel.png", 
-    ["istorel.png", "istorel.png", "istorel.png"], 
+    "istorel-contact.png", 
+    "istorel-news.png", 
+    "istorel-code-news.png", 
     "https://helenegreat.alwaysdata.net/istorel/",
-    "https://github.com/HeleneGreat/istorel",
-    ["HTML", "CSS", "Javascript", "PHP"]
+    "istorel",
+    ["HTML", "CSS", "Javascript", "PHP"],
+    "Istorel est le premier projet que j'ai eu à concevoir de A à Z au cours de ma formation. La consigne était de créer la refonte d'un site non responsive et qui ne répond pas aux critères d'accessibilité, d'ergonomie et de design actuels.</p>
+    <p>J'ai choisi </p>
+    "
 );
 
 $mvcPortfolio = new Portfolio(
@@ -34,10 +41,13 @@ $mvcPortfolio = new Portfolio(
     "Découverte de MVC", 
     "Premier site réalisé avec l'arborescence MVC, c'est aussi la première fois que je créé un espace administrateur un peu plus étoffé.", 
     "mvc-php-messages.png", 
-    ["mvc-php-messages.png", "mvc-php-messages.png", "mvc-php-messages.png"],
+    "mvc-php-messages.png", 
+    "mvc-php-messages.png", 
+    "mvc-php-messages.png",
     "",
-    "",
-    ["HTML", "CSS", "Javascript", "PHP", "MySQL", "MVC", "Composer"]
+    "portfolio",
+    ["HTML", "CSS", "Javascript", "PHP", "MySQL", "MVC", "Composer"],
+    ""
 );
 
 
