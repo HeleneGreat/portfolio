@@ -24,15 +24,15 @@ for($i = 0; $i<count($allPortfolios); $i++ ){
                 <hr class="mx-5 mt-5">
                 <div class="col">
                     <div class="card-body">
-                        <h1 class="card-title text-center"><?= $allPortfolios[$currentId]->getTitle();?></h1>
-                        <h4 class="card-text font-italic text-center"><?= $allPortfolios[$currentId]->getUnderTitle();?></h4>
+                        <h1 class="card-title text-center bleu"><?= $allPortfolios[$currentId]->getTitle();?></h1>
+                        <h4 class="card-text font-italic text-center mb-4"><?= $allPortfolios[$currentId]->getUnderTitle();?></h4>
                         <div class="row">
                             <div class="col-12 col-md-8">
-                                <h2>Cahier des charges</h2>
+                                <h4 class="bleu">Cahier des charges</h4>
                                 <p class="pl-3"><?= $allPortfolios[$currentId]->getDescription();?></p>
                             </div>
                             <div class="col-12 col-md-4 text-center border-left">
-                                <h2>Technologies utilisées</h2>
+                                <h4 class="bleu">Technologies utilisées</h4>
                                 <ul>
                                 <?php foreach($allPortfolios[$currentId]->getTechno() as $techno) {?>
                                     <li class="techno"><span><?= $techno ; ?></span></li>

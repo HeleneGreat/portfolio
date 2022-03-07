@@ -7,8 +7,8 @@
                 <div class="col col-lg-6 mx-auto">
                     <ul class="list-inline text-center yclair row justify-content-between m-3">
                         <li class="list-inline-item"><a href="detail-portfolio.php?id=1">Mon dernier projet</a></li>
-                        <li class="list-inline-item"><a target="_blank" title="GitHub" href="https://github.com/HeleneGreat"><i class="fa-brands fa-github"></i></a></li>
-                        <li class="list-inline-item"><a target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/h%C3%A9l%C3%A8ne-carriou/"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a target="_blank" title="GitHub" href="https://github.com/HeleneGreat"><i class="fa-brands fa-github yclair"></i></a></li>
+                        <li class="list-inline-item"><a target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/h%C3%A9l%C3%A8ne-carriou/"><i class="fa-brands fa-linkedin yclair"></i></a></li>
                     </ul>
                 </div>
             </div>

@@ -36,7 +36,7 @@ require_once('class/fakeBdd.php');
 
 
 <!-- Alerte MAJ régulières -->
-<aside class="alert alert-success alert-dismissible fade show container" role="alert">
+<aside class="alert my-alert alert-dismissible fade show container" role="alert">
     <h5 class="alert-heading">Cette section est régulièrement mise à jour pour y intégrer mes derniers projets.</h5>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aira-hidden="true">x</span>
@@ -57,7 +57,7 @@ require_once('class/fakeBdd.php');
                     </a>
                 <!-- </div> -->
                 <div class="card-body">
-                    <h3 class="card-title"><?= $allPortfolio->getTitle();?></h3>
+                    <h3 class="card-title bleu"><?= $allPortfolio->getTitle();?></h3>
                     <p class="card-text"><?= $allPortfolio->getUnderTitle();?></p>
                 </div>   
                 <a class="btn btn-bleu w-50 mx-auto mb-4" href="<?= $allPortfolio->getUrl();?>">Détails du projet</a>

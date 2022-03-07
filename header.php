@@ -25,14 +25,14 @@ $current=basename($path);
 
 <body>
 
-    <header>
-        <div id="bandeau-header" class="bg-bleu sticky">
+    <header class="sticky-top">
+        <div id="bandeau-header" class="bg-bleu">
             <div class="container ligne">
                 <div class="row">
-                    <nav id="menuprincipal" class="col d-flex navbar navbar-expand-xl py-xl-5">
-                        <h2 class="yclair"><a class="navbar-brand row" href="index.php"><i class="fa-solid fa-code"></i></a> <span class="font-italic">Hélène Carriou</span>, développeuse web</h2>
+                    <nav id="menuprincipal" class="col d-flex navbar navbar-expand-xl py-xl-4">
+                        <h2 class="yclair"><a class="navbar-brand row" href="index.php"><i class="yclair fa-solid fa-code"></i></a> <span class="yclair font-italic">Hélène Carriou</span>, <br class="d-md-none">développeuse web</h2>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-                            <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+                            <span class="navbar-toggler-icon"><i class="fa-solid fa-bars yclair"></i></span>
                         </button>
                         <div id="navbarContent" class="collapse navbar-collapse justify-content-end mx-3">
                             <ul id="navbar" class="navbar-nav yclair nav-pills">
