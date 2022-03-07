@@ -29,7 +29,7 @@ for($i = 0; $i<count($allPortfolios); $i++ ){
                         <div class="row">
                             <div class="col-12 col-md-8">
                                 <h4 class="bleu">Cahier des charges</h4>
-                                <p class="pl-3"><?= $allPortfolios[$currentId]->getDescription();?></p>
+                                <div class="pl-3"><?= $allPortfolios[$currentId]->getDescription();?></div>
                             </div>
                             <div class="col-12 col-md-4 text-center border-left">
                                 <h4 class="bleu">Technologies utilisées</h4>
@@ -37,7 +37,7 @@ for($i = 0; $i<count($allPortfolios); $i++ ){
                                 <?php foreach($allPortfolios[$currentId]->getTechno() as $techno) {?>
                                     <li class="techno"><span><?= $techno ; ?></span></li>
                                     <?php } ?>
-                                    <li><a title="GitHub" href="<?= $allPortfolios[$currentId]->getGithub();?>"><i class="fa-brands fa-github"></i></a></li>
+                                    <li class="mt-5"><a title="GitHub" href="<?= $allPortfolios[$currentId]->getGithub();?>"><i class="fa-brands fa-github"></i></a></li>
                                 </ul>
                             </div>
                         </div>

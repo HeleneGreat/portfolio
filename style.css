@@ -292,7 +292,6 @@ i.cv{
     }
 }
 
-
 @media screen and (min-width:992px){
 
     #menuprincipal{
@@ -302,12 +301,13 @@ i.cv{
     .all-cards{
         height: 520px;
     }
-
+    
     #sidebar-nav{
         right: 50px;
         top: 40%;
         position: fixed;
-        display: block
+        display: block;
+        width: 300px;
     }
 
     .sidebar{
@@ -322,6 +322,15 @@ i.cv{
     
     .sidebar:hover p{
         display: block;
+    }
+
+    #skills:target,
+    #school:target,
+    #job:target,
+    #language:target,
+    #hobby:target{
+    padding-top: 178px;
+    margin-top: -178px;
     }
 
 }
