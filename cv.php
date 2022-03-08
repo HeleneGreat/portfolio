@@ -3,7 +3,7 @@
 
 <!-- Alerte RECHERCHE STAGE -->
 <aside class="alert my-alert alert-dismissible fade show container" role="alert">
-    <h5 class="alert-heading">Je suis actuellement à la recherche d'un stage de 2 mois, du 27 avril au 24 juin 2022. Contactez-moi si mon profil vous intéresse !</h5>
+    <h5 class="alert-heading text-center">Je suis actuellement à la recherche d'un <strong>stage</strong> de 2 mois, du <strong>27 avril au 24 juin 2022</strong>.<br>Contactez-moi si mon profil vous intéresse !</h5>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aira-hidden="true">x</span>
     </button>
@@ -26,20 +26,20 @@
 
 <!-- SOFT SKILLS -->
 <section id="skills" class="container">
-    <h2 class="bleu mb-3 text-decoration-underline"><i class="cv fa-solid fa-person-hiking bleu"></i> Qualités personnelles</h2>
+    <h2 class="bleu mb-4 text-decoration-underline"><i class="cv fa-solid fa-person-hiking bleu"></i> Qualités personnelles</h2>
     <!-- <h2 class="bleu mb-3 text-decoration-underline"><i class="cv fa-solid fa-brain bleu"></i> Qualités personnelles</h2> -->
-    <div class="row justify-content-around">
-        <ul class="">
+    <div class="pl-4 row text-center justify-content-md-around">
+        <ul class="mt-n3 col-md-3">
             <li>Travail en équipe</li>
             <li>Autonomie</li>
             <li>Adaptabilité</li>
         </ul>
-        <ul class="">
+        <ul class="mt-n3 mt-md col-md-3">
             <li>Sens de l'organisation</li>
             <li>Force de proposition</li>
             <li>Curiosité</li>
         </ul>
-        <ul class="">
+        <ul class="mt-n3 mt-md col-md-3">
             <li>Polyvalence</li>
             <li>Rigueur</li>
             <li>Diplomatie</li>
@@ -56,8 +56,20 @@
             <h3 class="what bleu">BTS Développeur intégrateur en réalisation d'applications web</h3>
             <h4 class="where">Formation Kercode au greta de Vannes<span class="bleu px-3">|</span>2021-2022</h4>
             <ul>
-                <li>HTML CSS Javascript PHP mySQL</li>
+                <li>HTML / CSS, Bootstrap</li>
+                <li>Javascript, JQuery</li>
+                <li>PHP, POO, Laravel</li>
+                <li>MySQL</li>
                 <li>Wordpress, Drupal</li>
+                <li>Git / GitHub</li>
+                <li>SEO</li>
+                <li>Accessibilité</li>
+                <li>Méthode agile, user stories</li>
+                <li>Virtualisation</li>
+                <li>Introductions aux outils des métiers annexes :</li>
+                <li>- Photoshop, Illustrator</li>
+                <li>- Figma, Adobe XD</li>
+                <li>- Ergonomie</li>
             </ul>
         </div>
         <!-- M2 CAEN -->
@@ -136,7 +148,10 @@
             <h3 class="what bleu">Chargée de missions Qualité et Développement Durable</h3>
             <h4 class="where">Mr. Bricolage (45)<span class="bleu px-3">|</span>2018</h4>
             <ul>
-                <li></li>
+                <li>Organisation du Mois du développement durable pour sensibiliser les salariés sur différents thèmes</li>
+                <li>Création d'un flyer à destination des magasins, dans le cadre des certificats d'économie d'énergie (CEE)</li>
+                <li>Gestion des déchets</li>
+                <li>Veille réglementaire et technologique</li>
             </ul>
         </div>
         <!-- Galway -->

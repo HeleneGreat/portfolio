@@ -31,9 +31,9 @@ for($i = 0; $i<count($allPortfolios); $i++ ){
                                 <h4 class="bleu">Cahier des charges</h4>
                                 <div class="pl-3"><?= $allPortfolios[$currentId]->getDescription();?></div>
                             </div>
-                            <div class="col-12 col-md-4 text-center border-left">
+                            <div class="col-12 col-md-4 text-center border-md-left">
                                 <h4 class="bleu">Technologies utilisées</h4>
-                                <ul>
+                                <ul class="p-0">
                                 <?php foreach($allPortfolios[$currentId]->getTechno() as $techno) {?>
                                     <li class="techno"><span><?= $techno ; ?></span></li>
                                     <?php } ?>

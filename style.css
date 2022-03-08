@@ -2,6 +2,7 @@
 - RESET
 - HEADER
 - FOOTER
+- INDEX
 - CAROUSEL
 - LISTE DES PORTFOLIOS
 - PAGE DETAIL PORTFOLIO
@@ -65,6 +66,12 @@ hr{
     margin-left: 10%;
 }
 
+strong,
+strong a{
+    font-size: inherit;
+    color: inherit
+}
+
 @font-face {
     font-family: 'abelregular';
     src: url('fonts/abel-regular-webfont.woff2') format('woff2'),
@@ -81,9 +88,9 @@ hr{
 
 
 /* ----- HEADER ----- */
-#bandeau-header h2 a,
-#bandeau-header h2 span,
-#bandeau-header h2{
+#bandeau-header #my-name,
+#bandeau-header #my-name i,
+#bandeau-header #my-name span{
     font-size: 32px;
 }
 
@@ -127,6 +134,17 @@ hr{
 /* END FOOTER */
 
 
+/* ----- INDEX ----- */
+
+.jumbo-text,
+.jumbo-text a{
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+
+/* END INDEX */
 
 /* ----- CAROUSEL ----- */
 #slider{
@@ -203,7 +221,6 @@ opacity: .8;
 li.techno{
     margin-bottom: 15px;
 }
-
 
 li.techno span{
     background-color: var(--yclair);
@@ -290,6 +307,11 @@ i.cv{
     .all-cards{
         height: 615px;
     }
+    
+    .border-md-left {
+        border-left: 1px solid #e3e7eb !important;
+    }
+
 }
 
 @media screen and (min-width:992px){
@@ -332,5 +354,7 @@ i.cv{
     padding-top: 178px;
     margin-top: -178px;
     }
+
+    
 
 }

@@ -37,7 +37,7 @@ require_once('class/fakeBdd.php');
 
 <!-- Alerte MAJ régulières -->
 <aside class="alert my-alert alert-dismissible fade show container" role="alert">
-    <h5 class="alert-heading">Cette section est régulièrement mise à jour pour y intégrer mes derniers projets.</h5>
+    <h5 class="alert-heading text-center">Cette section est régulièrement mise à jour pour y intégrer mes derniers projets.</h5>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aira-hidden="true">x</span>
     </button>
