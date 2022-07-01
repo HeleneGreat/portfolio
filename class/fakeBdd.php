@@ -38,30 +38,65 @@ $istorel = new Portfolio(
     "
 );
 
+
+$asterix = new Portfolio(
+    002,
+    "Parc Astérix en PHP",
+    "Petit projet perso pour tester PHP",
+    "asterix-uml.png",
+    "asterix-results.png",
+    "asterix-parc.png",
+    "asterix-sensationsfortes.png",
+    "",
+    "parc-asterix",
+    ["PHP"],
+    "<p>Voici un tout petit projet perso que j'ai réalisé lorsque j'ai découvert PHP orienté objet. J'ai testé les différents piliers de la POO avec ce petit jeu. Je le lançais dans la console de debug de VS Code.</p>
+    <p>Il s'agit d'un petit jeu de gestion d'un parc d'attractions. Il est possible de construire des attractions, les entretenir et les dégrader !</p>
+    <p>Toute ressemblance avec le jeu Planet Coaster n'est absolument pas fortuite...</p>"
+);
+
+
 $mvcPortfolio = new Portfolio(
-    002, 
+    003, 
     "Découverte de MVC", 
-    "Premier site réalisé avec l'arborescence MVC et création d'un espace administrateur
-    ", 
-    "mvc-php-messages.png", 
-    "mvc-php-messages.png", 
-    "mvc-php-messages.png", 
-    "mvc-php-messages.png",
+    "Premier site réalisé avec l'arborescence MVC et création d'un espace administrateur", 
+    "mvc-read-delete.png", 
+    "mvc-update.png", 
+    "mvc-create-admin.png", 
+    "mvc-create.png",
     "",
     "portfolio",
     ["HTML", "CSS", "Javascript", "PHP", "MySQL", "MVC", "Composer"],
     "<p>Ici le design et le remplissage du site n'était pas la priorité, c'est pourquoi les pages sont assez vides.</p>
     <p>L'objectif de ce micro-projet est la découverte de l'arborescence MVC et du gestionnaire de dépendances Composer, la compréhension de l'organisation et du schéma de transmission des informations entre le routeur, le controller, le model et la view.</p>
     <p>Ce site a aussi été l'occasion d'y lier une base de données et de créer un espace administrateur pour intéragir avec elle.</p>
-    <p>Le formulaire de contact est opérationnel, il envoie en BDD les messages des internautes. Un SELECT dans l'espace administrateur permet de les afficher, et un DELETE est associé à un bouton pour supprimer une ligne de la BDD.</p>
+    <p>Le formulaire de contact est opérationnel, il envoie en BDD les messages des internautes. Un SELECT dans l'espace administrateur permet de les afficher, et un DELETE est associé à un bouton pour supprimer une ligne de la BDD. L'administrateur peut aussi modifier ses identifiants.</p>
+    <p>Pour des raisons de manque de sécurité (création de compte admin et accès à la BDD...) ce site n'est pas en ligne. Des captures d'écran sont disponibles en bas de page.</p>
     "
 );
 
-$asterix;
+
+$bookshelfCorner = new Portfolio(
+    004,
+    "The Bookshelf Corner",
+    "Projet final pour la validation de mon Bac+2 développeur web",
+    "bookshelf-home.png",
+    "bookshelf-book.png",
+    "bookshelf-admin.png",
+    "bookshelf-comments.png",
+    "https://helenegreat.alwaysdata.net/bookshelf_corner/",
+    "bookshelf-corner",
+    ["HTML", "CSS", "Javascript", "PHP", "MySQL", "MVC"],
+    "<p>J'ai créé un blog de passionnés de lecture, qui publient des articles sur les livres qu'ils ont aimé.</p>
+    <p>Le site comprend un espace administrateur étoffé, qui permet une gestion complète des articles, commentaires des utilisateurs, messages reçus, modification de l'identité du blog (logo + nom)...</p>
+    <p>Les visiteurs du blog peuvent également se créer un compte pour poster des commentaires</p>
+    <p>C'est mon premier vrai projet avec une base de données et un MVC. Je me suis bien éclatée avec PHP et toutes les possibilités de requêtes et d'affichage ! J'avais encore pleins d'idées d'amélioration, mais à un moment il fallait bien rendre le projet pour obtenir la certification &#128517;</p>"
+);
+
 
 $yulbaba;
 
 $hielo;
 
 // Array containing all of the projets (add the most recent one in [0])
-$allPortfolios = [$istorel, $mvcPortfolio];
+$allPortfolios = [$bookshelfCorner, $mvcPortfolio, $asterix, $istorel];

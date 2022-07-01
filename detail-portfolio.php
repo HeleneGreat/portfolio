@@ -14,7 +14,7 @@ for($i = 0; $i<count($allPortfolios); $i++ ){
 
 
 
-<section class="container mb-4">
+<section class="container mb-4">                        
     <article class="row">
         <div class="col mt-5">
             <div id="detail-card" class="row card shadow no-gutters py-3">
@@ -37,12 +37,15 @@ for($i = 0; $i<count($allPortfolios); $i++ ){
                                 <?php foreach($allPortfolios[$currentId]->getTechno() as $techno) {?>
                                     <li class="techno"><span><?= $techno ; ?></span></li>
                                     <?php } ?>
-                                    <li class="mt-5"><a title="GitHub" href="<?= $allPortfolios[$currentId]->getGithub();?>"><i class="fa-brands fa-github"></i></a></li>
+                                    <li class="mt-5"><a target="_blank" title="GitHub" href="<?= $allPortfolios[$currentId]->getGithub();?>"><i class="fa-brands fa-github"></i></a></li>
                                 </ul>
                             </div>
                         </div>
 
+                                                
+                        <?php if($allPortfolios[$currentId]->getExternalLink() != "") { ?>
                         <a class="btn btn-bleu d-block col-8 col-sm-6  col-md-3  col-xl-2 mx-auto" href="<?= $allPortfolios[$currentId]->getExternalLink();?>" target=_blank>Voir le site en ligne</a>
+                        <?php }; ?>
                     </div>
                 </div>
             </div>
@@ -50,18 +53,23 @@ for($i = 0; $i<count($allPortfolios); $i++ ){
     </article>
 </section>
 
+
+<?php if($allPortfolios[$currentId]->getScreenshot1() != "") { ?>
+
 <!-- CAPTURE D'ECRAN DU PROJET -->
 <section class="container mt-3">
     <div class="row justify-content-around">
-        <!-- CAPTURE D'ECRAN  -->
-           
-          
+    <!-- CAPTURE D'ECRAN  -->
+
     <!-- PHOTO 1 -->
-        <article class="col-12 col-lg-3 mt-5">
+        <article class="col-12 col-lg-3 mt-5 mt-lg-3">
             <div id="detail-card" class="col row card shadow no-gutters py-3">
-            <button type="button" class="col btn" data-toggle="modal" data-target="#myModal1">
+                <!-- modal qui s'ouvre en grand écran -->
+            <button type="button" class="col btn big-screen" data-toggle="modal" data-target="#myModal1">
                 <img class="card-img" src="images/<?= $allPortfolios[$currentId]->getScreenshot1(); ?>" alt="">
             </button>
+                <!-- uniquement la petite vignette en mobile -->
+            <img class="small-screen card-img" src="images/<?= $allPortfolios[$currentId]->getScreenshot1(); ?>" alt="">
             </div>
             <!-- The Modal -->
             <div class="modal" id="myModal1">
@@ -77,12 +85,16 @@ for($i = 0; $i<count($allPortfolios); $i++ ){
             </div>
         </article>
 
-<!-- PHOTO 2 -->
-        <article class="col-12 col-lg-3 mt-5">
+    <?php if($allPortfolios[$currentId]->getScreenshot2() != "") { ?>
+    <!-- PHOTO 2 -->
+        <article class="col-12 col-lg-3 mt-5 mt-lg-3">
             <div id="detail-card" class="col row card shadow no-gutters py-3">
-            <button type="button" class="col btn" data-toggle="modal" data-target="#myModal2">
+             <!-- modal qui s'ouvre en grand écran -->
+             <button type="button" class="col btn big-screen" data-toggle="modal" data-target="#myModal2">
                 <img class="card-img" src="images/<?= $allPortfolios[$currentId]->getScreenshot2(); ?>" alt="">
             </button>
+            <!-- uniquement la petite vignette en mobile -->
+            <img class="small-screen card-img" src="images/<?= $allPortfolios[$currentId]->getScreenshot2(); ?>" alt="">
             </div>
             <!-- The Modal -->
             <div class="modal" id="myModal2">
@@ -98,12 +110,16 @@ for($i = 0; $i<count($allPortfolios); $i++ ){
             </div>
         </article>
 
+    <?php } if($allPortfolios[$currentId]->getScreenshot3() != "") { ?>
     <!-- PHOTO 3 -->
-        <article class="col-12 col-lg-3 mt-5">
+        <article class="col-12 col-lg-3 mt-5 mt-lg-3">
             <div id="detail-card" class="col row card shadow no-gutters py-3">
-            <button type="button" class="col btn" data-toggle="modal" data-target="#myModal3">
+             <!-- modal qui s'ouvre en grand écran -->
+             <button type="button" class="col btn big-screen" data-toggle="modal" data-target="#myModal3">
                 <img class="card-img" src="images/<?= $allPortfolios[$currentId]->getScreenshot3(); ?>" alt="">
             </button>
+            <!-- uniquement la petite vignette en mobile -->
+            <img class="small-screen card-img" src="images/<?= $allPortfolios[$currentId]->getScreenshot3(); ?>" alt="">
             </div>
             <!-- The Modal -->
             <div class="modal" id="myModal3">
@@ -118,8 +134,15 @@ for($i = 0; $i<count($allPortfolios); $i++ ){
                 </div>
             </div>
         </article>
+    <?php } ;?>
     
     </div>
 </section>
+<?php } ;?>
+
+
+
+
+
 
 <?php include_once('footer.php'); ?> 

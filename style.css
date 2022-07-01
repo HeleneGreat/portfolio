@@ -1,17 +1,23 @@
 /*
+
 - RESET
 - HEADER
 - FOOTER
 - INDEX
 - CAROUSEL
-- LISTE DES PORTFOLIOS
-- PAGE DETAIL PORTFOLIO
+- PORTFOLIO LIST
+- PORTFOLIO DETAIL
 - CV
+
+MEDIA QUERIES
 
 */
 
 
-/* ----- RESET ----- */
+
+/* --------------------------------------------- */
+/* ------------------- RESET ------------------- */
+/* --------------------------------------------- */
 :root{
     --yclair: #F2B705;
     --noir: #261911;
@@ -22,7 +28,7 @@
     color: #4D4D4D;
 }
 
-li{
+ul li{
     list-style-type: none;
 }
 
@@ -84,15 +90,19 @@ strong a{
     font-family: 'abelregular', Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
-/* END RESET */
 
-
-/* ----- HEADER ----- */
+/* ---------------------------------------------- */
+/* ------------------- HEADER ------------------- */
+/* ---------------------------------------------- */
 #bandeau-header #my-name,
-#bandeau-header #my-name i,
 #bandeau-header #my-name span{
     font-size: 32px;
 }
+
+#bandeau-header #my-name h2{
+    font-size: 30px;
+}
+
 
 .nav-link{
     font-size: 1.3rem;
@@ -105,11 +115,18 @@ strong a{
     color: var(--bleu);
 }
 
+.navbar-toggler{
+    position: fixed;
+    right: 10px;
+    top: 40px;
+}
+
 .navbar-toggler,
 .navbar-toggler-icon{
     color: var(--yclair);
     font-size: 2rem;
     vertical-align: middle;
+    padding: 0;
 }
 
 .sticky{
@@ -117,11 +134,14 @@ strong a{
     top: 0;
     z-index: 9999999;
 }
-/* END HEADER */
 
-/* ----- FOOTER ----- */
+
+/* ---------------------------------------------- */
+/* ------------------- FOOTER ------------------- */
+/* ---------------------------------------------- */
 #pied{
     position: relative;
+    z-index: 9999;
 }
 
 #pied li a{
@@ -131,22 +151,21 @@ strong a{
 #pied li a i{
     font-size: 1.6rem;
 }
-/* END FOOTER */
 
 
-/* ----- INDEX ----- */
-
+/* --------------------------------------------- */
+/* ------------------- INDEX ------------------- */
+/* --------------------------------------------- */
 .jumbo-text,
 .jumbo-text a{
     font-size: 1.2rem;
-    text-align: justify;
     margin-bottom: 40px;
 }
 
 
-/* END INDEX */
-
-/* ----- CAROUSEL ----- */
+/* ------------------------------------------------ */
+/* ------------------- CAROUSEL ------------------- */
+/* ------------------------------------------------ */
 #slider{
     padding: 20px 0;
     width: 100%;
@@ -170,10 +189,11 @@ strong a{
 .control:hover i{
 opacity: .8;
 }
-/* END CAROUSEL */
 
 
-/* ----- LISTE DES PORTFOLIOS ----- */
+/* ------------------------------------------------ */
+/* ---------------- PORTFOLIO LIST ---------------- */
+/* ------------------------------------------------ */
 .all-cards{
     height: 545px;
 }
@@ -194,14 +214,17 @@ opacity: .8;
 .all-cards .card-img img{
     width: 100%;
 }
-/* END LISTE DES PORTFOLIOS */
 
-
-
-/* ----- PAGE DETAIL PORTFOLIO ----- */
+/* ---------------------------------------------- */
+/* -------------- PORTFOLIO DETAIL -------------- */
+/* ---------------------------------------------- */
 .border-soft{
     border: 1px solid var(--noir);
     color: rgba(38, 25, 17, 0.5);
+}
+
+.modal{
+    z-index: 999999;
 }
 
 #modal-window{
@@ -216,6 +239,10 @@ opacity: .8;
 .modal-body img{
     object-fit: contain;
     max-height: 780px;
+}
+
+.big-screen{
+    display: none;
 }
 
 li.techno{
@@ -238,11 +265,9 @@ li.techno span{
     background-color: #1e3c72;
 }
 
-
-/* END DETAIL PORTFOLIO */
-
-
-/* ----- CV ----- */
+/* ---------------------------------------------- */
+/* --------------------- CV --------------------- */
+/* ---------------------------------------------- */
 .what{
     font-size: 1.2rem;
     font-weight: bold;
@@ -256,13 +281,14 @@ i.cv{
     font-size: 1.5rem;
 }
 
-/* SIDEBAR */
+/* CV SIDEBAR */
 #sidebar-nav{
     bottom: 10px;
     position: fixed;
     display: flex;
     width: 100%;
     justify-content: center;
+    z-index: 999;
 }
 
 .sidebar{
@@ -300,10 +326,17 @@ i.cv{
     margin-top: -140px;
 }
 
-/* END CV */
 
+
+/* ----------------------------------------------------- */
+/* ------------------- MEDIA QUERIES ------------------- */
+/* ----------------------------------------------------- */
 
 @media screen and (min-width: 768px) { 
+    .navbar-toggler{
+        position: unset;
+    }
+
     .all-cards{
         height: 615px;
     }
@@ -323,10 +356,18 @@ i.cv{
     .all-cards{
         height: 520px;
     }
+
+    .big-screen{
+        display: block;
+    }
+
+    .small-screen{
+        display: none;
+    }
     
     #sidebar-nav{
         right: 50px;
-        top: 40%;
+        top: 30%;
         position: fixed;
         display: block;
         width: 300px;
@@ -353,8 +394,6 @@ i.cv{
     #hobby:target{
     padding-top: 178px;
     margin-top: -178px;
-    }
-
-    
+    }    
 
 }

@@ -2,8 +2,8 @@
 
 
 <!-- Alerte RECHERCHE STAGE -->
-<aside class="alert my-alert alert-dismissible fade show container" role="alert">
-    <h5 class="alert-heading text-center">Je suis actuellement à la recherche d'un <strong>stage</strong> de 2 mois, du <strong>27 avril au 24 juin 2022</strong>.<br>Contactez-moi si mon profil vous intéresse !</h5>
+<aside class="alert my-alert alert-dismissible fade show container w-75" role="alert">
+    <h5 class="alert-heading text-center">Je suis actuellement à la recherche d'une <strong>alternance</strong>, à partir de <strong>septembre 2022</strong>. Je suis acceptée à MyDigitalSchool de Vannes, sur un rythme de 2 semaines en entreprise, 1 semaine à l'école.<br>Contactez-moi si mon profil vous intéresse !</h5>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aira-hidden="true">x</span>
     </button>
@@ -124,7 +124,37 @@
 <!-- EXPERIENCES -->
     <section id="job" class="container">
         <h2 class="bleu"><i class="cv fa-solid fa-briefcase bleu"></i> Expériences</h2>
-        <!-- Vannes -->
+        <!-- iole Solutions -->
+        <div class="pl-4">
+            <h3 class="what bleu">Développeuse web python (stage)</h3>
+            <h4 class="where">iole Solutions<span class="bleu px-3">|</span>2022</h4>
+            <ul>
+                <li>Découverte et apprentissage du langage python en totale autonomie</li>
+                <li>Manipulation de fichiers xml et csv</li>
+                <li>Travail sur Git / Gitea et les branches</li>
+            </ul>
+                <p class="mb-0">⨠ Mission principale : <br>
+                Création d'un script en python qui :</p>
+                <ol>
+                    <li>exécute le framework de test Cypress</li>
+                    <li>récupère les données issues des fichiers xml des tests Cypress qui sont ensuite renommés pour éviter toute possibilité d'erreur dans les prochaines exécutions du script</li>
+                    <li>crée un fichier csv avec les données importantes : liste de tous les modules testés, temps d'exécution, erreurs...</li>
+                    <li>crée un 2ème csv avec des statistiques issues de ces tests : temps d'exécution moyen et maximum, liste des modules ayant des erreurs, nombre d'erreurs...</li>
+                </ol>
+                <ul>
+                    <li>L'objectif est que les résultats des tests soient facilement interprétables et compréhensibles, même pour un non informaticien.</li>
+                    <li>Chaque fonction, variable, return... a été typé pour éviter toute erreur.</li>
+                    <li>Code commenté en français et anglais pour faciliter les évolutions futures du script.</li>
+                    <li>Rédaction d'un read me à destination de l'utilisateur</li>
+                </ul>
+                    <p class="mb-0">⨠ Mission secondaire :</p>
+                <ul>
+                    <li>Création d'un questionnaire sur le site de l'entreprise</li>
+                    <li>Travail de référencement/SEO pour améliorer le positionnement du site iole.fr</li>
+                    <li>Création de contenus</li>
+                </ul>
+        </div>
+        <!-- Depart 56 Vannes -->
         <div class="pl-4">
             <h3 class="what bleu">Gestionnaire insertion</h3>
             <h4 class="where">Département du Morbihan<span class="bleu px-3">|</span>2021</h4>
@@ -133,7 +163,7 @@
                 <li>Liquidation des subventions aux chantiers d'insertion</li>
             </ul>
         </div>
-        <!-- Faouët -->
+        <!-- Dept 56 Faouët -->
         <div class="pl-4">
             <h3 class="what bleu">Assistante de territoire en protection de l'enfance</h3>
             <h4 class="where">Département du Morbihan<span class="bleu px-3">|</span>2019-2020</h4>

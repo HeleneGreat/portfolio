@@ -77,8 +77,8 @@ class Portfolio{
 
 
     function getUrl (): string {
-        // return "https://helenegreat.alwaysdata.net/detail-portfolio.php?id=".$this->getId();
-        return "http://localhost/portfolio/detail-portfolio.php?id=".$this->getId();
+        return "https://helenegreat.alwaysdata.net/portfolio/detail-portfolio.php?id=".$this->getId();
+        // return "http://localhost/portfolio/portfolio/detail-portfolio.php?id=".$this->getId();
     }
 
 
