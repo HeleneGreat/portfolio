@@ -49,7 +49,7 @@ require('class/fakeBdd.php');
 <section class="container mb-4">
     <div class="row justify-content-between">
     <?php foreach($allPortfolios as $allPortfolio) {?>
-        <article id="<?= $allPortfolio->getId();?>" class="col-12 col-lg-5 mt-5 project-card">
+        <article id="<?= $allPortfolio->getId();?>" class="col-12 col-lg-5 project-card">
             <div class="card shadow pt-3 px-2 all-cards">
                 <!-- <div class="card-img"> -->
                     <a href="<?= $allPortfolio->getUrl();?>">
@@ -58,7 +58,7 @@ require('class/fakeBdd.php');
                 <!-- </div> -->
                 <div class="card-body">
                     <h3 class="card-title bleu"><?= $allPortfolio->getTitle();?></h3>
-                    <p class="card-text"><?= $allPortfolio->getUnderTitle();?></p>
+                    <p class="card-text mb-3"><?= $allPortfolio->getUnderTitle();?></p>
                 </div>   
                 <a class="btn btn-bleu w-50 mx-auto mb-4" href="<?= $allPortfolio->getUrl();?>">Détails du projet</a>
             </div>

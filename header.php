@@ -33,7 +33,6 @@ $current=basename($path);
             <div class="container">
                 <div class="row">
                     <nav id="menuprincipal" class="col d-flex navbar navbar-expand-xl py-xl-2">
-                        <!-- <h2 class="yclair"><a class="navbar-brand row" href="index.php"><i class="yclair fa-solid fa-code"></i></a> <span class="yclair font-italic">Hélène Carriou</span>,<br>développeuse web</h2> -->
                         <a id="my-name" class="navbar-brand row" href="./index.php"><h2 class="yclair"><i class="yclair fa-solid fa-code"></i> <span class="yclair font-italic">Hélène Carriou</span>,<br>développeuse web</h2></a>
 
 
