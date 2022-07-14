@@ -1,3 +1,4 @@
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 <?php include_once('header.php'); ?>
 
     <!-- Alerte RECHERCHE STAGE -->
@@ -21,9 +22,10 @@
             <p class="jumbo-text text-right mb-0 bleu font-weight-bold">Hélène CARRIOU</p>
         </div>
         <!-- LinkedIn public badge -->
-        <div class="badge-base LI-profile-badge" data-locale="fr_FR" data-size="large" data-theme="dark" data-type="VERTICAL" data-vanity="hélène-carriou" data-version="v1">
+        <div class="badge-base LI-profile-badge" data-locale="fr_FR" data-size="large" data-theme="light" data-type="VERTICAL" data-vanity="hélène-carriou" data-version="v1">
             <a class="badge-base__link LI-simple-link" href="https://fr.linkedin.com/in/h%C3%A9l%C3%A8ne-carriou?trk=profile-badge"></a>
         </div>
+              
               
               
               
@@ -33,4 +35,3 @@
 
 
 <?php include_once('footer.php'); ?>
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
